@@ -1,5 +1,5 @@
 <?php
-require '../db_connect.php';
+require '../../db_connect.php';
 session_start();
 
 // Check if the form is submitted
@@ -29,6 +29,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
 } else {
     // If someone tries to access this page directly without submitting the form, redirect back to the login page
-    header('Location: login.php');
+    header('Location: ../views/login.php');
     exit();
 }

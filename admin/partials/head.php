@@ -1,10 +1,12 @@
 <?php
 session_start();
 
+//die(var_dump($_SESSION));
+
 //die(var_dump($_SESSION['email']));
 //die(var_dump($_SESSION['loggedin']));
 
-if (!isset($_SESSION['email']) && $_SESSION['loggedin']) {
+if (!isset($_SESSION['email']) && !isset($_SESSION['loggedin'])) {
     header("Location: login.php");
     exit();
 }

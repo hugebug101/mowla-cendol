@@ -1,5 +1,5 @@
 <?php
-require '../db_connect.php';
+require '../../db_connect.php';
 
 //die('This page is not yet implemented');
 

@@ -1,14 +1,13 @@
 <?php
-require 'controllers/OrderController.php';
-
 $pageTitle = "Orders";
+
+require '../controllers/OrderController.php';
+require '../partials/head.php';
+require '../partials/nav.php';
+require '../partials/header.php';
+
 $date = isset($_POST['date']) ? $_POST['date'] : '';
-
 ?>
-
-<?php include './partials/head.php'; ?>
-<?php include './partials/nav.php'; ?>
-<?php include './partials/header.php'; ?>
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
@@ -64,16 +63,16 @@ $date = isset($_POST['date']) ? $_POST['date'] : '';
 
                                 <?php
 
+
                                 $orderController = new OrderController();
-                                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['date'])) {
-                                    $selectedDate = $_POST['date'];
+                                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['order_date'])) {
+                                    $selectedDate = $_POST['order_date'];
                                     $orders = $orderController->getOrdersByDate($selectedDate);
                                 } else {
                                     $orders = $orderController->getOrders();
                                 }
 
-                                //                                die(var_dump($orders));
-
+                                //                                var_dump($orders);
 
                                 foreach ($orders as $order) {
                                     ?>
@@ -82,12 +81,12 @@ $date = isset($_POST['date']) ? $_POST['date'] : '';
                                             <?php echo $order['id']; ?>
                                         </td>
                                         <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                                            <?php echo $order['name']; ?>
+                                            <?php echo $order['customerName']; ?>
                                         </td>
-                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><?php echo $order['food']; ?></td>
-                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><?php echo $order['quantity']; ?></td>
-                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><?php echo $order['order_date']; ?></td>
-                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><?php echo $order['done']; ?></td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><?php echo $order['foodName']; ?></td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><?php echo $order['foodQuantity']; ?></td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><?php echo $order['orderDate']; ?></td>
+                                        <td class="whitespace-nowrap px-4 py-2 text-gray-700"><?php echo $order['doneStatus']; ?></td>
                                     </tr>
                                     <?php
                                 }
@@ -104,4 +103,4 @@ $date = isset($_POST['date']) ? $_POST['date'] : '';
     </div>
 </main>
 
-<?php include './partials/footer.php'; ?>
+<?php include '../partials/footer.php'; ?>

@@ -6,15 +6,23 @@ class OrderController
 
     function getOrders()
     {
-        $query = "SELECT * FROM orders";
+        $query = /** @lang text */
+            "SELECT o.id, o.customerName, o.orderDate, o.doneStatus, f.foodName, fo.foodQuantity FROM orders o
+          INNER JOIN food_order fo ON o.id = fo.order_id
+          INNER JOIN food f ON f.id = fo.food_id";
         $statement = $GLOBALS['db']->prepare($query);
+        $statement->execute();
         $orders = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $orders;
     }
 
     function getOrdersByDate($date)
     {
-        $query = "SELECT * FROM orders WHERE order_date = :date";
+        $query = /** @lang text */
+            "SELECT o.id, o.customerName, o.orderDate, o.doneStatus, f.foodName, fo.foodQuantity FROM orders o
+          INNER JOIN food_order fo ON o.id = fo.order_id
+          INNER JOIN food f ON f.id = fo.food_id
+          WHERE o.orderDate = :date";
         $statement = $GLOBALS['db']->prepare($query);
         $statement->bindValue(':date', $date);
         $statement->execute();
@@ -22,11 +30,15 @@ class OrderController
         return $orders;
     }
 
-
     public function getDoneOrders()
     {
-        $query = "SELECT * FROM orders WHERE done = 1";
+        $query = /** @lang text */
+            "SELECT o.id, o.customerName, o.orderDate, o.doneStatus, f.foodName, fo.foodQuantity FROM orders o
+              INNER JOIN food_order fo ON o.id = fo.order_id
+              INNER JOIN food f ON f.id = fo.food_id
+              WHERE o.done = 1";
         $statement = $GLOBALS['db']->prepare($query);
+        $statement->execute();
         $orders = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $orders;
     }

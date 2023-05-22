@@ -14,8 +14,8 @@
                         <a href="dashboard.php"
                            class="<?php echo (basename($_SERVER['PHP_SELF']) === 'dashboard.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium"
                            aria-current="page">Dashboard</a>
-                        <a href="team.php"
-                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'team.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Team</a>
+                        <a href="food.php"
+                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'food.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Team</a>
                         <a href="order.php"
                            class="<?php echo (basename($_SERVER['PHP_SELF']) === 'order.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Orders</a>
                         <a href="#"
@@ -59,7 +59,7 @@
                                id="user-menu-item-0">Your Profile</a>
                             <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1"
                                id="user-menu-item-1">Settings</a>
-                            <a href="logout.php" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
+                            <a href="../auth/logout.php" class="block px-4 py-2 text-sm text-gray-700" role="menuitem"
                                tabindex="-1"
                                id="user-menu-item-2">Sign out</a>
                         </div>
