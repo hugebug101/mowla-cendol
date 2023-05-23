@@ -42,4 +42,12 @@ class OrderController
         $orders = $statement->fetchAll(PDO::FETCH_ASSOC);
         return $orders;
     }
+
+    public function getOrdersSortedByDoneStatus($ascending)
+    {
+        $query = /** @lang text */
+            "SELECT * FROM orders ORDER BY doneStatus " . ($ascending ? "ASC" : "DESC");
+        $statement = $GLOBALS['db']->prepare($query);
+        $statement->execute();
+    }
 }
