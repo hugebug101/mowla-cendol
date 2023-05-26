@@ -1,0 +1,41 @@
+/* Hide the slide-over by default */
+#cartSlideOver {
+    display: none;
+}
+
+/* Show the slide-over when it has the 'show' class */
+#cartSlideOver.show {
+    display: block;
+}
+
+/* Animate the slide-over entering from the right */
+#cartSlideOver.show .transform {
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    transform: translateX(0);
+}
+
+/* Animate the slide-over exiting to the right */
+#cartSlideOver .transform {
+    transition-property: transform;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    transform: translateX(100%);
+}
+
+/* Animate the backdrop fading in */
+#cartSlideOver.show .backdrop {
+    transition-property: opacity;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    opacity: 1;
+}
+
+/* Animate the backdrop fading out */
+#cartSlideOver .backdrop {
+    transition-property: opacity;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in-out;
+    opacity: 0;
+}

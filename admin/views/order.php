@@ -10,31 +10,24 @@ require '../partials/header.php';
 
 $date = isset($_POST['date']) ? $_POST['date'] : '';
 
-
 $orderController = new OrderController();
+$foodController = new FoodController();
 
-// Check if the "sort" parameter is set and handle sorting
-if (isset($_GET['sort']) && $_GET['sort'] === 'done') {
-    // Check if the "order" parameter is set and handle ascending or descending order
-    if (isset($_GET['order']) && $_GET['order'] === 'desc') {
-        $orders = $orderController->getOrdersSortedByDoneStatus(false);
-    } else {
-        $orders = $orderController->getOrdersSortedByDoneStatus(true);
-    }
-} else {
-    // Default behavior without sorting
-    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['date'])) {
-        $selectedDate = $_POST['date'];
-        $orders = $orderController->getOrdersByDate($selectedDate);
-    } else {
-        $orders = $orderController->getOrders();
-    }
-}
+$orders = $orderController->getOrders();
+var_dump($orders);
+
+
+//if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['date'])) {
+//    $selectedDate = $_POST['date'];
+//    $orders = $orderController->getOrdersByDate($selectedDate);
+//} else {
+//    $orders = $orderController->getOrders();
+//}
+
 ?>
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-
         <div class="overflow-hidden px-5 ">
             <form action="" method="POST" class="mb-4">
                 <label for="date" class="block mb-2 font-medium">Filter by Date:</label>
@@ -53,7 +46,6 @@ if (isset($_GET['sort']) && $_GET['sort'] === 'done') {
                 </div>
             </form>
         </div>
-
         <!-- component -->
         <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
@@ -69,24 +61,10 @@ if (isset($_GET['sort']) && $_GET['sort'] === 'done') {
                 </tr>
                 </thead>
                 <tbody class="divide-y divide-gray-100 border-t border-gray-100">
-
                 <?php
-
-
-                $orderController = new OrderController();
-                if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['date'])) {
-                    $selectedDate = $_POST['date'];
-                    $orders = $orderController->getOrdersByDate($selectedDate);
-                } else {
-                    $orders = $orderController->getOrders();
-                }
-
                 echo '<br>';
-
                 $rowNumber = 1;
-
                 foreach ($orders as $order) : ?>
-
                     <tr class="hover:bg-gray-50">
                         <th class="flex gap-3 px-6 py-4 font-normal text-gray-900">
                             <div class="text-sm">
@@ -99,17 +77,8 @@ if (isset($_GET['sort']) && $_GET['sort'] === 'done') {
 
                         <?php
 
-                        //get all food in order
-
-
-                        $foodController = new FoodController();
                         $foods = $foodController->getFoodByUserID($order['id']);
-
-
-                        //                        die(var_dump($foods));
                         ?>
-
-
                         <!--                        --><?php
                         //                        $foodNames = explode(', ', $order['foodName']);
                         //                        foreach ($foodNames as $food) :
@@ -118,24 +87,20 @@ if (isset($_GET['sort']) && $_GET['sort'] === 'done') {
                         <!--                                --><?php //= $food ?>
                         <!--                            </span>-->
                         <!--                        --><?php //endforeach; ?>
-
-
                         <td class="px-6 py-4">
                             <div class="flex gap-2">
                                 <?php
                                 $foodNames = explode(', ', $order['foodName']);
                                 foreach ($foodNames as $index => $food) : ?>
                                     <span class="inline-flex items-center gap-1 rounded-full bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-800">
-                <?= $food ?>
-            </span>
+                                            <?= $food ?>
+                                        </span>
                                     <?php if ($index !== count($foodNames) - 1) : ?>
                                         <span class="inline-flex items-center">,</span>
                                     <?php endif; ?>
                                 <?php endforeach; ?>
                             </div>
                         </td>
-
-
                         <td class="px-6 py-4">
                             <?= $order['foodName'] ?> x <?= $order['foodQuantity'] ?>
                         </td>
@@ -151,20 +116,14 @@ if (isset($_GET['sort']) && $_GET['sort'] === 'done') {
                                 <span class="text-red-500 font-semibold">No</span>
                             <?php endif; ?>
                         </td>
-
-
                     </tr>
-
                     <?php
                     $rowNumber++;
                 endforeach; ?>
-
                 </tbody>
             </table>
         </div>
 
     </div>
 </main>
-
-
 <?php include '../partials/footer.php'; ?>

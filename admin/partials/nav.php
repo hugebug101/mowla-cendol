@@ -14,6 +14,9 @@
                         <a href="dashboard.php"
                            class="<?php echo (basename($_SERVER['PHP_SELF']) === 'dashboard.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium"
                            aria-current="page">Dashboard</a>
+                        <a href="test-food.php"
+                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'test-food.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium"
+                           aria-current="page">Test Food</a>
                         <a href="food.php"
                            class="<?php echo (basename($_SERVER['PHP_SELF']) === 'food.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Foods</a>
                         <a href="order.php"

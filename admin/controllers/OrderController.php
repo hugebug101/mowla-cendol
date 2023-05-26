@@ -8,8 +8,8 @@ class OrderController
     {
         $query = /** @lang text */
             "SELECT o.id, o.customerName, o.orderDate, o.doneStatus, f.foodName, fo.foodQuantity FROM orders o
-          INNER JOIN food_order fo ON o.id = fo.order_id
-          INNER JOIN food f ON f.id = fo.food_id";
+              INNER JOIN food_order fo ON o.id = fo.order_id
+              INNER JOIN food f ON f.id = fo.food_id";
         $statement = $GLOBALS['db']->prepare($query);
         $statement->execute();
         $orders = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -20,9 +20,9 @@ class OrderController
     {
         $query = /** @lang text */
             "SELECT o.id, o.customerName, o.orderDate, o.doneStatus, f.foodName, fo.foodQuantity FROM orders o
-          INNER JOIN food_order fo ON o.id = fo.order_id
-          INNER JOIN food f ON f.id = fo.food_id
-          WHERE o.orderDate = :date";
+              INNER JOIN food_order fo ON o.id = fo.order_id
+              INNER JOIN food f ON f.id = fo.food_id
+              WHERE o.orderDate = :date";
         $statement = $GLOBALS['db']->prepare($query);
         $statement->bindValue(':date', $date);
         $statement->execute();
@@ -34,9 +34,9 @@ class OrderController
     {
         $query = /** @lang text */
             "SELECT o.id, o.customerName, o.orderDate, o.doneStatus, f.foodName, fo.foodQuantity FROM orders o
-              INNER JOIN food_order fo ON o.id = fo.order_id
-              INNER JOIN food f ON f.id = fo.food_id
-              WHERE o.done = 1";
+                  INNER JOIN food_order fo ON o.id = fo.order_id
+                  INNER JOIN food f ON f.id = fo.food_id
+                  WHERE o.done = 1";
         $statement = $GLOBALS['db']->prepare($query);
         $statement->execute();
         $orders = $statement->fetchAll(PDO::FETCH_ASSOC);

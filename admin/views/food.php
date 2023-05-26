@@ -6,24 +6,14 @@ require '../partials/head.php';
 require '../partials/nav.php';
 require '../partials/header.php';
 
-// Handle form submission
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['foodName']) && isset($_POST['foodPrice'])) {
-        $foodName = $_POST['foodName'];
-        $foodPrice = $_POST['foodPrice'];
-
-        $foodController = new FoodController();
-        $foodController->addFood($foodName, $foodPrice);
-    }
-}
 ?>
 
 <main>
     <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-
         <div class="overflow-hidden px-5 ">
             <h2 class="text-xl font-semibold mb-2">Add New Food Item</h2>
-            <form action="" method="POST" class="flex items-center space-x-4">
+            <form action="../controllers/FoodController.php" method="POST" class="flex items-center space-x-4">
+                <input type="hidden" name="action" value="addFood">
                 <label for="foodName" class="text-gray-700">Food Name:</label>
                 <input type="text" id="foodName" name="foodName" class="px-4 py-2 border border-gray-300 rounded-md"
                        required>
@@ -34,14 +24,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </button>
             </form>
         </div>
-
         <div class="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
             <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
                 <thead class="bg-gray-50">
                 <tr>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-900">No</th>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-900">Food Name</th>
-                    <th scope="col" class="px-6 py-4 font-medium text-gray-900">Food Price (RM)</th>
+                    <th scope="col" class="px-6 py-4 font-medium text-gray-900">Food Price</th>
                     <th scope="col" class="px-6 py-4 font-medium text-gray-900">Action</th>
                 </tr>
                 </thead>
@@ -55,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <tr class="hover:bg-gray-50">
                         <td class="px-6 py-4"><?= $rowNumber ?></td>
                         <td class="px-6 py-4"><?= $food['foodName'] ?></td>
-                        <td class="px-6 py-4"><?= number_format($food['foodPrice'], 2) ?></td>
+                        <td class="px-6 py-4">RM <?= number_format($food['foodPrice'], 2) ?></td>
                         <td class="px-6 py-4">
                             <a href="food_update.php?id=<?= $food['id'] ?>"
                                class="text-blue-500 hover:text-blue-600 mr-2 font-bold">
@@ -66,13 +55,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 Delete
                             </a>
                         </td>
-
-
                     </tr>
                     <?php
                     $rowNumber++;
                 endforeach; ?>
-
                 </tbody>
             </table>
         </div>
