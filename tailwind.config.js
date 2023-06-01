@@ -11,4 +11,5 @@ module.exports = {
     require("@tailwindcss/forms"),
     require("@tailwindcss/aspect-ratio"),
   ],
+  content: ["./styles/**/*.css", "./pages/**/*.js", "./components/**/*.js"],
 };

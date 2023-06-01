@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Hide the slide-over by default */
 #cartSlideOver {
     display: none;
