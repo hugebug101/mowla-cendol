@@ -14,15 +14,15 @@ $orderController = new OrderController();
 $foodController = new FoodController();
 
 $orders = $orderController->getOrders();
-var_dump($orders);
+//var_dump($orders);
 
 
-//if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['date'])) {
-//    $selectedDate = $_POST['date'];
-//    $orders = $orderController->getOrdersByDate($selectedDate);
-//} else {
-//    $orders = $orderController->getOrders();
-//}
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['date'])) {
+    $selectedDate = $_POST['date'];
+    $orders = $orderController->getOrdersByDate($selectedDate);
+} else {
+    $orders = $orderController->getOrders();
+}
 
 ?>
 
@@ -76,17 +76,9 @@ var_dump($orders);
                         </td>
 
                         <?php
-
                         $foods = $foodController->getFoodByUserID($order['id']);
                         ?>
-                        <!--                        --><?php
-                        //                        $foodNames = explode(', ', $order['foodName']);
-                        //                        foreach ($foodNames as $food) :
-                        //                            ?>
-                        <!--                            <span class="inline-flex items-center gap-1 rounded-full bg-blue-100 px-2 py-1 text-xs font-semibold text-blue-800">-->
-                        <!--                                --><?php //= $food ?>
-                        <!--                            </span>-->
-                        <!--                        --><?php //endforeach; ?>
+
                         <td class="px-6 py-4">
                             <div class="flex gap-2">
                                 <?php

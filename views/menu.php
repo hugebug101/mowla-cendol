@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Menu Page';
+$pageTitle = 'Menu List';
 require_once '../admin/controllers/FoodController.php';
 require_once '../admin/controllers/CartController.php';
 
@@ -104,7 +104,7 @@ $message = isset($_GET['message']) ? $_GET['message'] : '';
     <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
         <form action="?clear_cart" method="post" class="mb-8">
             <button type="submit" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md
-            text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
+                    text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">
                 Clear Cart
             </button>
         </form>
