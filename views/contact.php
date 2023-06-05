@@ -10,7 +10,7 @@ $pageTitle = 'Contact Us';
         <section class="bg-gray-100">
             <div class="container px-6 mx-auto">
                 <div class="grid grid-cols-1 gap-12 mt-10 md:grid-cols-2">
-                    <div class="flex flex-col items-center justify-center p-6 rounded-lg shadow-md bg-white">
+                    <div class="flex flex-col items-center justify-center p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 bg-white">
                         <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-blue-100">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                  stroke="currentColor" class="w-6 h-6 text-blue-600">
@@ -20,10 +20,11 @@ $pageTitle = 'Contact Us';
                         </div>
                         <h2 class="mt-4 text-base font-medium text-gray-800">Email</h2>
                         <p class="mt-2 text-sm text-gray-600">Our friendly team is here to help.</p>
-                        <p class="mt-2 text-sm text-blue-600">mowla@cendol.com</p>
+                        <p class="mt-2 text-sm text-blue-600"><a href="mailto:someone@example">info@cx2foodcourt.com</a>
+                        </p>
                     </div>
 
-                    <div class="flex flex-col items-center justify-center p-6 rounded-lg shadow-md bg-white">
+                    <div class="flex flex-col items-center justify-center p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 bg-white">
                         <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-blue-100">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                  stroke="currentColor" class="w-6 h-6 text-blue-600">
@@ -37,7 +38,7 @@ $pageTitle = 'Contact Us';
                                 team</a></p>
                     </div>
 
-                    <div class="flex flex-col items-center justify-center p-6 rounded-lg shadow-md bg-white">
+                    <div class="flex flex-col items-center justify-center p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 bg-white">
                         <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-blue-100">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                  stroke="currentColor" class="w-6 h-6 text-blue-600">
@@ -53,7 +54,7 @@ $pageTitle = 'Contact Us';
                         <p class="mt-2 text-sm text-blue-600">Gombak, 53100 Kuala Lumpur</p>
                     </div>
 
-                    <div class="flex flex-col items-center justify-center p-6 rounded-lg shadow-md bg-white">
+                    <div class="flex flex-col items-center justify-center p-6 rounded-lg shadow-md hover:shadow-xl transition duration-300 bg-white ">
                         <div class="flex items-center justify-center w-12 h-12 mb-4 rounded-full bg-blue-100">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                                  stroke="currentColor" class="w-6 h-6 text-blue-600">
@@ -63,7 +64,7 @@ $pageTitle = 'Contact Us';
                         </div>
                         <h2 class="mt-4 text-base font-medium text-gray-800">Phone</h2>
                         <p class="mt-2 text-sm text-gray-600">Mon-Sat from 8.00am to 5.30pm.</p>
-                        <p class="mt-2 text-sm text-blue-600">+016-907 4534</p>
+                        <p class="mt-2 text-sm text-blue-600">+60 16-907 4534</p>
                     </div>
                 </div>
             </div>

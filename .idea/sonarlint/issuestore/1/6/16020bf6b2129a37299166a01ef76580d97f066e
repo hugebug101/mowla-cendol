@@ -1,0 +1,14 @@
+
+Qphp:S105"EReplace all tab characters in this file by sequences of white-spaces.
+`php:S103…"KSplit this 151 characters long line (which is greater than 120 authorized).(üÞÖí
+`php:S103‰"KSplit this 149 characters long line (which is greater than 120 authorized).(¦ìžµ
+;	php:S2003"&Replace "include" with "include_once".(òÊ£Þ
+@	php:S2003"&Replace "include" with "include_once".(ƒ¾®îÿÿÿÿÿ
+;	php:S2003"&Replace "include" with "include_once".(–ý»©
+A	php:S2003‘"&Replace "include" with "include_once".(ˆ ·Ôúÿÿÿÿ
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(çáï¾ùÿÿÿÿ
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(ÇªÎÇÿÿÿÿÿ
+a	php:S4833"LReplace "include" with namespace import mechanism through the "use" keyword.(òÊ£Þ
+f	php:S4833"LReplace "include" with namespace import mechanism through the "use" keyword.(ƒ¾®îÿÿÿÿÿ
+a	php:S4833"LReplace "include" with namespace import mechanism through the "use" keyword.(–ý»©
+g	php:S4833‘"LReplace "include" with namespace import mechanism through the "use" keyword.(ˆ ·Ôúÿÿÿÿ

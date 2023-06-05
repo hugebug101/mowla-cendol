@@ -1,0 +1,25 @@
+
+Qphp:S105"EReplace all tab characters in this file by sequences of white-spaces.
+_php:S103j"KSplit this 132 characters long line (which is greater than 120 authorized).(¸ø‰ı
+_php:S103k"KSplit this 131 characters long line (which is greater than 120 authorized).(üı“
+_php:S103s"KSplit this 138 characters long line (which is greater than 120 authorized).(ĞÄô
+_php:S103w"KSplit this 132 characters long line (which is greater than 120 authorized).(¨™ÁÀ
+ephp:S103"KSplit this 127 characters long line (which is greater than 120 authorized).(ÛúÑÃÿÿÿÿÿ
+`php:S103"KSplit this 121 characters long line (which is greater than 120 authorized).(Ğ€“Œ
+`php:S103“"KSplit this 128 characters long line (which is greater than 120 authorized).(Ã“ÕÑ
+;	php:S20030"&Replace "include" with "include_once".(òÊ£Ş
+@	php:S20031"&Replace "include" with "include_once".(ƒ¾®îÿÿÿÿÿ
+;	php:S20032"&Replace "include" with "include_once".(–ı»©
+<	php:S2003ª"&Replace "include" with "include_once".(£«¾†
+A	php:S2003«"&Replace "include" with "include_once".(õäøüÿÿÿÿ
+A	php:S2003¯"&Replace "include" with "include_once".(šóÕŒıÿÿÿÿ
+A	php:S2003°"&Replace "include" with "include_once".(ˆ ·Ôúÿÿÿÿ
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(çáï¾ùÿÿÿÿ
+k	php:S4833"QReplace "require_once" with namespace import mechanism through the "use" keyword.(ÇªÎÇÿÿÿÿÿ
+a	php:S48330"LReplace "include" with namespace import mechanism through the "use" keyword.(òÊ£Ş
+f	php:S48331"LReplace "include" with namespace import mechanism through the "use" keyword.(ƒ¾®îÿÿÿÿÿ
+a	php:S48332"LReplace "include" with namespace import mechanism through the "use" keyword.(–ı»©
+b	php:S4833ª"LReplace "include" with namespace import mechanism through the "use" keyword.(£«¾†
+g	php:S4833«"LReplace "include" with namespace import mechanism through the "use" keyword.(õäøüÿÿÿÿ
+g	php:S4833¯"LReplace "include" with namespace import mechanism through the "use" keyword.(šóÕŒıÿÿÿÿ
+g	php:S4833°"LReplace "include" with namespace import mechanism through the "use" keyword.(ˆ ·Ôúÿÿÿÿ

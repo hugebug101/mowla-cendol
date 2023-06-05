@@ -20,7 +20,7 @@ $pageTitle = 'About Us';
                 <p class="text-lg text-gray-700 mb-8 text-center lg:text-left">53100 Kuala Lumpur, Malaysia</p>
 
                 <h3 class="text-xl font-bold text-gray-900 mb-4 text-center lg:text-left">Contact Information:</h3>
-                <p class="text-lg text-gray-700 mb-2 text-center lg:text-left">Phone: +016-9074534</p>
+                <p class="text-lg text-gray-700 mb-2 text-center lg:text-left">Phone: +60 16-907 4534</p>
                 <p class="text-lg text-gray-700 mb-8 text-center lg:text-left">Email: info@cx2foodcourt.com</p>
 
                 <p class="text-lg text-gray-700 text-center lg:text-left">

@@ -1,0 +1,5 @@
+
+Qphp:S105"EReplace all tab characters in this file by sequences of white-spaces.
+7	php:S1780u"Remove this closing tag "?>".(Φ‘δΟϊÿÿÿÿ
+;	php:S2003"&Replace "require" with "require_once".(ήμγο
+a	php:S4833"LReplace "require" with namespace import mechanism through the "use" keyword.(ήμγο

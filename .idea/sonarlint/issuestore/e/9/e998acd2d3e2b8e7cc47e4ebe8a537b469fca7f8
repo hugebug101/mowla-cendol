@@ -1,0 +1,17 @@
+
+Qphp:S105"EReplace all tab characters in this file by sequences of white-spaces.
+b	php:S1192b"HDefine a constant instead of duplicating this literal ":foodId" 3 times.(¸çıÿÿÿÿ
+w	php:S14880"]Immediately return this expression instead of assigning it to the temporary variable "$food".(ğÊÒşüÿÿÿÿ
+x	php:S1488Œ"]Immediately return this expression instead of assigning it to the temporary variable "$food".(ğÊÒşüÿÿÿÿ
+s	php:S1488—"]Immediately return this expression instead of assigning it to the temporary variable "$food".(Î‹ãš
+y	php:S1488¨"^Immediately return this expression instead of assigning it to the temporary variable "$foods".(¾ Ëùÿÿÿÿ
+y	php:S1488²"^Immediately return this expression instead of assigning it to the temporary variable "$count".(¿Ò¤£üÿÿÿÿ
+y	php:S1488¿"^Immediately return this expression instead of assigning it to the temporary variable "$foods".(¾ Ëùÿÿÿÿ
+x	php:S1488Õ"]Immediately return this expression instead of assigning it to the temporary variable "$food".(ğÊÒşüÿÿÿÿ
+I	php:S1481"4Remove this unused "$foodController" local variable.(†Ò² 
+@	php:S1481&"+Remove this unused "$foods" local variable.(ØĞ•Ë
+I	php:S1066"/Merge this if statement with the enclosing one.(å€»üÿÿÿÿ
+;	php:S2003"&Replace "require" with "require_once".(Şìãï
+s	php:S4144Ï"XUpdate this method so that its implementation is not identical to "getFoods" on line 42.(äÖ÷úÿÿÿÿ
+9php:S125"Remove this commented out code.(Õ¡ÿ©ûÿÿÿÿ
+a	php:S4833"LReplace "require" with namespace import mechanism through the "use" keyword.(Şìãï

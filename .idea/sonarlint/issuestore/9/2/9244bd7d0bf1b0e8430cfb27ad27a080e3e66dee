@@ -1,0 +1,17 @@
+
+dphp:S103"KSplit this 149 characters long line (which is greater than 120 authorized).(øœåÚýÿÿÿÿ
+dphp:S103"KSplit this 290 characters long line (which is greater than 120 authorized).(Œáªøþÿÿÿÿ
+dphp:S103"KSplit this 149 characters long line (which is greater than 120 authorized).(øœåÚýÿÿÿÿ
+dphp:S103)"KSplit this 149 characters long line (which is greater than 120 authorized).(øœåÚýÿÿÿÿ
+dphp:S1039"KSplit this 150 characters long line (which is greater than 120 authorized).(øœåÚýÿÿÿÿ
+dphp:S103>"KSplit this 391 characters long line (which is greater than 120 authorized).(ÎŽÝÕøÿÿÿÿ
+;	php:S2003"&Replace "include" with "include_once".(òÊ£Þ
+@	php:S2003"&Replace "include" with "include_once".(ƒ¾®îÿÿÿÿÿ
+;	php:S2003"&Replace "include" with "include_once".(–ý»©
+@	php:S2003K"&Replace "include" with "include_once".(šóÕŒýÿÿÿÿ
+@	php:S2003L"&Replace "include" with "include_once".(ˆ ·Ôúÿÿÿÿ
+a	php:S4833"LReplace "include" with namespace import mechanism through the "use" keyword.(òÊ£Þ
+f	php:S4833"LReplace "include" with namespace import mechanism through the "use" keyword.(ƒ¾®îÿÿÿÿÿ
+a	php:S4833"LReplace "include" with namespace import mechanism through the "use" keyword.(–ý»©
+f	php:S4833K"LReplace "include" with namespace import mechanism through the "use" keyword.(šóÕŒýÿÿÿÿ
+f	php:S4833L"LReplace "include" with namespace import mechanism through the "use" keyword.(ˆ ·Ôúÿÿÿÿ

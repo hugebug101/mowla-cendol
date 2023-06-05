@@ -26,14 +26,14 @@
 
                                 <div class="mt-8">
                                     <div class="flow-root">
-                                        <?php
-                                        //get items from session
-                                        $items = $_SESSION['cart'];
-                                        $subtotal = 0; // variable to store subtotal
+										<?php
+										//get items from session
+										$items = $_SESSION['cart'];
+										$subtotal = 0; // variable to store subtotal
 
-                                        //check if cart is empty
-                                        if (empty($items)) :
-                                            ?>
+										//check if cart is empty
+										if (empty($items)) :
+											?>
                                             <div class="py-6">
                                                 <div class="flex justify-center">
                                                     <svg class="h-12 w-12 text-gray-400"
@@ -49,20 +49,20 @@
                                                     </p>
                                                 </div>
                                             </div>
-                                        <?php else: ?>
+										<?php else: ?>
                                         <ul role="list" class="-my-6 divide-y divide-gray-200">
-                                            <?php
-                                            //loop through items
+											<?php
+											//loop through items
 
-                                            foreach ($items as $item) :
-                                                $itemSubtotal = $item['price'] * $item['quantity']; // calculate item subtotal
-                                                $subtotal += $itemSubtotal; // add item subtotal to total
-                                                ?>
+											foreach ($items as $item) :
+												$itemSubtotal = $item['price'] * $item['quantity']; // calculate item subtotal
+												$subtotal += $itemSubtotal; // add item subtotal to total
+												?>
                                                 <ul role="list" class="-my-6 divide-y divide-gray-200">
                                                     <li class="flex py-6">
                                                         <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
-                                                            <img src="https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg"
-                                                                 alt="Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt."
+                                                            <img src="https://picsum.photos/400/300?random&category=food"
+                                                                 alt="Product Image"
                                                                  class="h-full w-full object-cover object-center">
                                                         </div>
 
@@ -93,7 +93,7 @@
                                                         </div>
                                                     </li>
                                                 </ul>
-                                            <?php endforeach; ?>
+											<?php endforeach; ?>
 
                                     </div>
                                 </div>
@@ -123,7 +123,7 @@
                                     </p>
                                 </div>
 
-                                <?php endif; ?>
+								<?php endif; ?>
 
                             </div>
                         </div>

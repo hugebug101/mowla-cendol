@@ -13,30 +13,30 @@ $totalFoods = $foodController->getTotalFoodCount();
 $totalPages = ceil($totalFoods / $itemsPerPage);
 
 if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = array();
+	$_SESSION['cart'] = array();
 }
 
 $cartController = new CartController();
 
 if (isset($_GET['clear_cart'])) {
-    $cartController->clearCart();
-    echo '<script>alert("Cart cleared successfully!");</script>';
-    header('Location: ' . $_SERVER['PHP_SELF']);
+	$cartController->clearCart();
+	echo '<script>alert("Cart cleared successfully!");</script>';
+	header('Location: ' . $_SERVER['PHP_SELF']);
 }
 
 if (isset($_GET['add_to_cart'])) {
-    $itemId = $_POST['item_id'];
-    $itemName = $_POST['item_name'];
-    $itemPrice = $_POST['item_price'];
-    $quantity = $_POST['quantity'];
+	$itemId = $_POST['item_id'];
+	$itemName = $_POST['item_name'];
+	$itemPrice = $_POST['item_price'];
+	$quantity = $_POST['quantity'];
 
-    $cartController->addToCart($itemId, $itemName, $itemPrice, $quantity);
-    echo '<script>alert("Item added to cart successfully!");</script>';
+	$cartController->addToCart($itemId, $itemName, $itemPrice, $quantity);
+	echo '<script>alert("Item added to cart successfully!");</script>';
 
-    // Store the current scroll position in sessionStorage
-    echo '<script>sessionStorage.setItem("scrollPosition", window.scrollY);</script>';
+	// Store the current scroll position in sessionStorage
+	echo '<script>sessionStorage.setItem("scrollPosition", window.scrollY);</script>';
 
-    header('Location: ' . $_SERVER['PHP_SELF']);
+	header('Location: ' . $_SERVER['PHP_SELF']);
 }
 
 var_dump($_SESSION['cart']);
@@ -110,10 +110,11 @@ $message = isset($_GET['message']) ? $_GET['message'] : '';
         </form>
 
         <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            <?php foreach ($foods as $food) : ?>
+
+			<?php foreach ($foods as $food) : ?>
                 <div class="group flex flex-col items-center p-4 bg-white rounded-lg hover:shadow-md transition duration-300 ease-in-out">
                     <div class="aspect-w-3 aspect-h-2 mb-4 overflow-hidden rounded-lg">
-                        <img src="https://tailwindui.com/img/ecommerce-images/category-page-04-image-card-03.jpg"
+                        <img src="https://picsum.photos/400/300/?random&category=food&id=<?= $food['id'] ?>"
                              alt="Food Image"
                              class="object-cover w-full h-full transform group-hover:scale-105 transition duration-300 ease-in-out">
                     </div>
@@ -138,7 +139,7 @@ $message = isset($_GET['message']) ? $_GET['message'] : '';
                             <div class="flex items-center justify-between">
                                 <button type="button" onclick="addToCart(<?= $food['id'] ?>)"
                                         class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium
-                                    rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2
+                                    rounded-md text-white bg-blue-800 hover:bg-indigo-700 focus:outline-none focus:ring-2
                                     focus:ring-offset-2 focus:ring-indigo-500">
                                     Add to Cart
                                 </button>
@@ -161,11 +162,13 @@ $message = isset($_GET['message']) ? $_GET['message'] : '';
                         <input type="hidden" name="item_price" value="<?= $food['foodPrice'] ?>">
                     </form>
                 </div>
-            <?php endforeach; ?>
+			<?php endforeach; ?>
+
+
         </div>
 
-        <?php include '../partials/pagination.php'; ?>
-        <?php include '../partials/openCart.php'; ?>
+		<?php include '../partials/pagination.php'; ?>
+		<?php include '../partials/openCart.php'; ?>
     </div>
 </main>
 

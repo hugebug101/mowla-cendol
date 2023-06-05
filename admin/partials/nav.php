@@ -14,17 +14,32 @@
                         <a href="dashboard.php"
                            class="<?php echo (basename($_SERVER['PHP_SELF']) === 'dashboard.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium"
                            aria-current="page">Dashboard</a>
-                        <a href="test-food.php"
-                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'test-food.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium"
-                           aria-current="page">Test Food</a>
-                        <a href="food.php"
-                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'food.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Foods</a>
+
+
                         <a href="order.php"
-                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'order.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Orders</a>
+                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'order.php') ? 'bg-gray-900 text-white' :
+                               'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Orders</a>
                         <a href="#"
-                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'calendar.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Calendar</a>
+                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'calendar.php') ? 'bg-gray-900 text-white' :
+                               'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Customers</a>
                         <a href="#"
-                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'reports.php') ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Reports</a>
+                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'calendar.php') ? 'bg-gray-900 text-white' :
+                               'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Revenue</a>
+                        <a href="food.php"
+                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'food.php') ? 'bg-gray-900 text-white' :
+                               'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Products</a>
+                        <a href="#"
+                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'reports.php') ? 'bg-gray-900 text-white' :
+                               'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Messages</a>
+                        <a href="#"
+                           class="<?php echo (basename($_SERVER['PHP_SELF']) === 'reports.php') ? 'bg-gray-900 text-white' :
+                               'text-gray-300 hover:bg-gray-700 hover:text-white'; ?> rounded-md px-3 py-2 text-sm font-medium">Settings</a>
+
+                        <!--                        <a href="test-food.php"-->
+                        <!--                           class="-->
+                        <?php //echo (basename($_SERVER['PHP_SELF']) === 'test-food.php') ? 'bg-gray-900 text-white' :
+                        //                               'text-gray-300 hover:bg-gray-700 hover:text-white'; ?><!-- rounded-md px-3 py-2 text-sm font-medium"-->
+                        <!--                           aria-current="page">Test Food</a>-->
                     </div>
                 </div>
 
