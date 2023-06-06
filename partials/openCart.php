@@ -1,3 +1,20 @@
+<?php
+require_once '../admin/controllers/FoodController.php';
+require_once '../admin/controllers/CartController.php';
+
+$cartController = new CartController();
+// Check if item removal action is triggered
+if (isset($_GET['remove']) && isset($_GET['id'])) {
+    $itemId = $_GET['id'];
+    $cartController->removeItem($itemId);
+    header('Location: http://localhost:8888/views/order_summary.php');
+    exit();
+}
+
+$items = $cartController->getCart();
+//var_dump($items);
+?>
+
 <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
     <div id="cartSlideOver" class="fixed inset-0 overflow-hidden">
         <div class="fixed inset-0 overflow-hidden">
@@ -26,14 +43,14 @@
 
                                 <div class="mt-8">
                                     <div class="flow-root">
-										<?php
-										//get items from session
-										$items = $_SESSION['cart'];
-										$subtotal = 0; // variable to store subtotal
+                                        <?php
+                                        //get items from session
+                                        $items = $_SESSION['cart'];
+                                        $subtotal = 0; // variable to store subtotal
 
-										//check if cart is empty
-										if (empty($items)) :
-											?>
+                                        //check if cart is empty
+                                        if (empty($items)) :
+                                            ?>
                                             <div class="py-6">
                                                 <div class="flex justify-center">
                                                     <svg class="h-12 w-12 text-gray-400"
@@ -49,15 +66,15 @@
                                                     </p>
                                                 </div>
                                             </div>
-										<?php else: ?>
+                                        <?php else: ?>
                                         <ul role="list" class="-my-6 divide-y divide-gray-200">
-											<?php
-											//loop through items
+                                            <?php
+                                            //loop through items
 
-											foreach ($items as $item) :
-												$itemSubtotal = $item['price'] * $item['quantity']; // calculate item subtotal
-												$subtotal += $itemSubtotal; // add item subtotal to total
-												?>
+                                            foreach ($items as $item) :
+                                                $itemSubtotal = $item['price'] * $item['quantity']; // calculate item subtotal
+                                                $subtotal += $itemSubtotal; // add item subtotal to total
+                                                ?>
                                                 <ul role="list" class="-my-6 divide-y divide-gray-200">
                                                     <li class="flex py-6">
                                                         <div class="h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
@@ -83,17 +100,27 @@
                                                                 <p class="text-gray-500">
                                                                     Qty <?= $item['quantity'] ?></p>
 
+
                                                                 <div class="flex">
-                                                                    <button type="button"
-                                                                            class="font-medium text-indigo-600 hover:text-indigo-500">
-                                                                        Remove
-                                                                    </button>
+                                                                    <form action="../admin/controllers/CartController.php"
+                                                                          method="GET">
+                                                                        <input type="hidden" name="action"
+                                                                               value="removeItem">
+                                                                        <input type="hidden" name="id"
+                                                                               value="<?= $item['id'] ?>">
+                                                                        <button type="submit"
+                                                                                class="font-medium text-red-500 hover:text-red-700"
+                                                                                onclick="return confirm('Are you sure you want to remove this item from the cart?')">
+                                                                            Remove
+                                                                        </button>
+                                                                    </form>
                                                                 </div>
+
                                                             </div>
                                                         </div>
                                                     </li>
                                                 </ul>
-											<?php endforeach; ?>
+                                            <?php endforeach; ?>
 
                                     </div>
                                 </div>
@@ -123,7 +150,7 @@
                                     </p>
                                 </div>
 
-								<?php endif; ?>
+                                <?php endif; ?>
 
                             </div>
                         </div>
