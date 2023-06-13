@@ -16,6 +16,17 @@ class OrderController
         return $orders;
     }
 
+    public function updateDoneStatus($orderId, $doneStatus)
+    {
+        // Update the doneStatus in the orders table
+        $updateQuery = "UPDATE orders SET doneStatus = :doneStatus WHERE id = :orderId";
+        $updateStatement = $GLOBALS['db']->prepare($updateQuery);
+        $updateStatement->bindParam(':doneStatus', $doneStatus);
+        $updateStatement->bindParam(':orderId', $orderId);
+        $updateStatement->execute();
+    }
+
+
     function createOrder($customerName, $orderDate, $doneStatus, $foodItems)
     {
         if (!is_array($foodItems)) {

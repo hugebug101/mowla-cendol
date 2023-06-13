@@ -101,12 +101,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['date'])) {
                             <?= $order['orderDate'] ?>
                         </td>
 
+
                         <td class="px-6 py-4">
-                            <?php if ($order['doneStatus']): ?>
-                                <span class="text-green-500 font-semibold">Yes</span>
-                            <?php else: ?>
-                                <span class="text-red-500 font-semibold">No</span>
-                            <?php endif; ?>
+                            <form action="">
+                                <button>
+                                    <?php if ($order['doneStatus']): ?>
+                                        <span class="text-green-500 font-semibold">Yes</span>
+                                    <?php else: ?>
+                                        <span class="text-red-500 font-semibold">No</span>
+                                    <?php endif; ?>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                     <?php
